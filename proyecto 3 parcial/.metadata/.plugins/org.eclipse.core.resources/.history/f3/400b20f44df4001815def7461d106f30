@@ -1,0 +1,58 @@
+package CalculadoraIMC;
+import java.awt.*;
+import javax.swing.*;
+public class Ventana2 extends JFrame{
+	JMenuBar masInfo;
+	JButton BotonInfo;
+	JPanel panel;
+	Container contenedor;
+	JButton boton2;
+	JButton boton3;
+	JLabel frase1;
+	JLabel frase2;
+	JLabel resultadoTexto;
+	JLabel recomendacionTexto;
+	JLabel mensajeFinal;
+	public Ventana2(){
+	
+		Toolkit Pantalla= Toolkit.getDefaultToolkit();
+		Dimension TamanoPantalla=Pantalla.getScreenSize();
+		int AltoPantalla=TamanoPantalla.height;
+		int AnchoPantalla=TamanoPantalla.width;
+		setBounds( AnchoPantalla/3,AltoPantalla/3, AnchoPantalla/2,AltoPantalla/2);
+		setTitle("Calculadora de IMC");
+		Image Icono = Pantalla.getImage("corazon.png");
+		setIconImage(Icono);
+		setVisible(true);
+		setResizable(false);
+		
+		contenedor=getContentPane();
+		panel=new JPanel();
+		masInfo =new JMenuBar();
+		BotonInfo=new JButton();
+		boton2=new JButton("Finalizar");
+		boton3=new JButton("Repetir");
+		frase1=new JLabel("Tu Resultado es:");
+		frase2=new JLabel("Te recomendamos que:");
+		resultadoTexto=new JLabel("aqui va el resultado del usurio");
+		recomendacionTexto=new JLabel("aqui va a ir las recomendaciones");
+		mensajeFinal=new JLabel("Mensaje Final Para el Usuario con Nombre ");
+        GridLayout gl = new GridLayout(8,1);
+        panel.setLayout(gl);
+        
+        boton2.setSize(5,5);
+        BotonInfo.setText("mas información");
+		masInfo.add(BotonInfo);
+		panel.add(masInfo);
+		panel.add(frase1);
+		panel.add(resultadoTexto);
+		panel.add(frase2);
+		panel.add(recomendacionTexto);
+		panel.add(mensajeFinal);
+		panel.add(boton2);
+		panel.add(boton3);
+		contenedor.add(panel);
+		setSize(500,400);
+	}
+	
+}

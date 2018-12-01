@@ -1,0 +1,22 @@
+package CalculadoraIMC;
+
+public class ProcesosDeCalculo {
+ 
+	int edad;
+	double peso;
+	int altura;
+	String nombre;
+	 
+	ProcesosDeCalculo(int edadusuario, double pesousuario, int alturausuario, String nombreusuario){
+		edad=edadusuario;
+		peso=pesousuario;
+		altura=alturausuario;
+		nombre=nombreusuario;
+		
+		 
+		 
+			
+		}
+		
+	}
+}

@@ -1,0 +1,43 @@
+package CalculadoraIMC;
+
+public class ProcesosDeCalculo {
+ 
+	int edad;
+	double peso;
+	int estatura;
+	String nombre;
+	String cad="";
+	 
+	ProcesosDeCalculo(int edadusuario, double pesousuario, int estaturausuario, String nombreusuario){
+		edad=edadusuario;
+		peso=pesousuario;
+		estatura=estaturausuario;
+		nombre=nombreusuario;
+	}
+	public double imc (){
+		return peso/(estatura*estatura);
+	
+	
+	if (imc() <16.00){
+		cad="Delgadez Severa";
+	}else if (imc() <= 16.00 || imc() <=16.99){
+		cad=" Delgadez moderada";
+	}else if (imc () <=17.00 || imc () <= 18.49){
+		cad="Delgadez aceptable";
+	}else if (imc () <=18.50 || imc () <= 24.99){
+		cad="Peso Normal";
+	}else if (imc() <=25.00 || imc () <= 29.99){
+		cad="Sobrepeso";
+	}else if (imc () >=30.00 || imc() <= 34.99){
+		cad="Obeso: Tipo I (Riesgo Moredado";
+	}else if (imc ()>=35.00 || imc() <= 39.99){
+	    cad="Obeso:tipo II (riego severo)";
+	}else if (imc ()>=40){
+		cad="Obeso:Tipo III (riesgo muy severo)";
+	}else{
+		cad="No existe claseficación";
+	}
+	}
+
+
+	

@@ -1,0 +1,13 @@
+package CalculadoraIMC;
+
+import javax.swing.*;
+import java.awt.*;
+public class Principal {
+
+	public static void main(String[] args) {
+		Ventana1 salir=new Ventana1();
+		salir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+}

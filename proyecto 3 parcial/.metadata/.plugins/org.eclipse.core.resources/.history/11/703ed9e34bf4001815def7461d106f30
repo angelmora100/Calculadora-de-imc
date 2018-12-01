@@ -1,0 +1,20 @@
+package CalculadoraIMC;
+
+import javax.swing.*;
+import java.awt.*;
+public class Principal {
+
+	public static void main(String[] args) {
+		Creditos a =new Creditos();
+		a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Ventana1 b=new Ventana1();
+		b.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		VentanaAdvert c =new VentanaAdvert();
+		c.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Ventana2 d=new Ventana2();
+		d.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ventanaSalida e=new ventanaSalida();
+		
+	}
+
+}

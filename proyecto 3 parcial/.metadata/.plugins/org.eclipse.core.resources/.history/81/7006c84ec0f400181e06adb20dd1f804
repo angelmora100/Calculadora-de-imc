@@ -1,0 +1,20 @@
+package CalculadoraIMC;
+
+public class ProcesosDeCalculo {
+ 
+	int edad;
+	double peso;
+	int estatura;
+	String nombre;
+	 
+	ProcesosDeCalculo(int edadusuario, double pesousuario, int estaturausuario, String nombreusuario){
+		edad=edadusuario;
+		peso=pesousuario;
+		estatura=estaturausuario;
+		nombre=nombreusuario;
+		}
+	public double imc (){
+		return peso/(estatura*estatura);
+	}
+	
+	}

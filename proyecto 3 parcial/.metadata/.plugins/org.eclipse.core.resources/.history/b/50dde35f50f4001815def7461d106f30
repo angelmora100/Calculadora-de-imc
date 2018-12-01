@@ -1,0 +1,92 @@
+package CalculadoraIMC;
+ 
+ import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+	public class Ventana1 extends JFrame implements ActionListener {
+		JPanel panel;
+		JButton Boton1;
+		JTextField PedirNombre;
+		JTextField PedirPeso;
+		JTextField PedirAltura;
+		JTextField PedirEdad;
+		JLabel Nombre;
+		JLabel Edad;
+		JLabel Peso;
+		JLabel Altura;
+		JLabel genero;
+		JButton boton1;
+		Container contenedor;
+		JRadioButton generoOpcionH;
+		JRadioButton generoOpcionM;
+		ButtonGroup grupos;
+			JMenuBar masInfo;
+			JButton BotonInfo;
+
+		public Ventana1 (){
+		
+			Toolkit Pantalla= Toolkit.getDefaultToolkit();
+			Dimension TamanoPantalla=Pantalla.getScreenSize();
+			int AltoPantalla=TamanoPantalla.height;
+			int AnchoPantalla=TamanoPantalla.width;
+			setBounds( AnchoPantalla/3,AltoPantalla/3, AnchoPantalla/2,AltoPantalla/2);
+			setTitle("Calculadora de IMC");
+			Image Icono = Pantalla.getImage("corazon.png");
+			setIconImage(Icono);
+			setVisible(true);
+			setResizable(false);
+			
+			contenedor=getContentPane();
+			panel=new JPanel();
+			PedirNombre=new JTextField(20);
+			PedirEdad=new JTextField(2);
+			PedirPeso=new JTextField(5);
+			PedirAltura=new JTextField(5);
+			Nombre=new JLabel("Nombre:");
+			Edad=new JLabel("Edad:");
+			Peso=new JLabel("Peso (en kg):");
+			Altura=new JLabel("Altura (en cm):");
+			boton1=new JButton("Iniciar");
+			genero=new JLabel("género:");
+			grupos=new ButtonGroup();
+			generoOpcionH=new JRadioButton("hombre");
+			generoOpcionM=new JRadioButton("Mujer");
+			ButtonGroup grupos = new ButtonGroup();
+			masInfo =new JMenuBar();
+			BotonInfo=new JButton();
+	        GridLayout gl = new GridLayout(13,1);
+	        panel.setLayout(gl);
+	        
+	        BotonInfo.setText("mas información");
+			masInfo.add(BotonInfo);
+			panel.add(masInfo);
+			contenedor.add(panel);
+			panel.add(Nombre);
+			panel.add(PedirNombre);
+			panel.add(Edad);
+			panel.add(PedirEdad);
+			panel.add(Peso);
+			panel.add(PedirPeso);
+			panel.add(Altura);
+			panel.add(PedirAltura);
+			panel.add(genero);
+			panel.add(generoOpcionH);
+			panel.add(generoOpcionM);
+			panel.add(boton1);
+			grupos.add(generoOpcionH);
+			grupos.add(generoOpcionM);
+			setSize(500,400);
+			
+			boton1.addActionListener(this);
+		        
+
+		}
+
+public void actionPerformed(ActionEvent e) {
+	// TODO Auto-generated method stub
+	Ventana2 ventana2 =new Ventana2();
+}
+	}
